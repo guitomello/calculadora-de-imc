@@ -14,15 +14,15 @@ function calcularIMC() {
 
     let classificacao;
 
-    if (resultado < 18.5) {
-        classificacao = 'abaixo do peso';
-    } else if (resultado >= 18.5) {
-        classificacao = 'peso normal';
+    if (resultado >= 30) {
+        classificacao = 'obesidade';
     } else if (resultado >= 25) {
         classificacao = 'sobrepeso';
+    } else if (resultado >= 18.5) {
+        classificacao = 'peso normal';
     } else {
-        classificacao = 'obesidade';
-    } 
+        classificacao = 'abaixo do peso';
+    }
 
     let textoResultado = `Seu índice é: ${resultado} e sua classificação de acordo com a tabela é: ${classificacao}.`;
     mostrarTexto('p', textoResultado);
